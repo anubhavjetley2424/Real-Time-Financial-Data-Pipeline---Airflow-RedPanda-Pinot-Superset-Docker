@@ -27,7 +27,7 @@ Transaction facts uses RedPanda broker for realtime data streaming to Pinot allo
 Customer, Account, Date and branch dimension data is generateed daily not in real-time
 <br></br>
 
-##**Usage:**
+##Steps to take:
 1) Run customer, branch, date and account dim generator dags to create dimension data
 2) Run schema and table dags to push json format to Apache Pinot
 3) Within Pinot, use SwaggerAPI to create tables using curl, input within the body the json table format, make sure each table is successfully created
