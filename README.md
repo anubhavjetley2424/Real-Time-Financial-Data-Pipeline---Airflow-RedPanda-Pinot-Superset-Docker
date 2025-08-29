@@ -16,7 +16,7 @@ Built a data warehouse, created schemas and tables for a star schema, used Airfl
 <br></br>
 
 ## **Star Schema:**
-<img width="900" height="480" alt="image" src="https://github.com/user-attachments/assets/47a6492d-519d-48f4-943a-69f4397701fa" />
+<img width="700" height="480" alt="image" src="https://github.com/user-attachments/assets/47a6492d-519d-48f4-943a-69f4397701fa" />
 
 <br><br>
 
