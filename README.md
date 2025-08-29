@@ -20,6 +20,17 @@ Built a data warehouse, created schemas and tables for a star schema, used Airfl
 
 <br><br>
 
-
+**Real-Time Application:**
 Transaction facts uses RedPanda broker for realtime data streaming to Pinot allowing real time updates within Superset, which can be set at 10s refresh providing real-time visualisations.
 
+**Batch-Processing:**
+Customer, Account, Date and branch dimension data is generateed daily not in real-time
+<br></br>
+
+##**Usage:**
+1) Run customer, branch, date and account dim generator dags to create dimension data
+2) Run schema and table dags to push json format to Apache Pinot
+3) Within Pinot, use SwaggerAPI to create tables using curl, input within the body the json table format, make sure each table is successfully created
+4) Run Dimension_Batch_Ingestion DAG to upload dimension data to Pinot
+5) Run transaction_facts_generator to generate transaction data which will be read by RedPanda broker, and then pushed to Pinot
+6) Open Superset service, connect to Pinot database, use SQLLab to combine key data from each table for a dashboard to show key visualisations
