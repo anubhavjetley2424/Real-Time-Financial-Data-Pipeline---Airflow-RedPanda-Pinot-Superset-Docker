@@ -1,0 +1,30 @@
+{
+  "schemaName": "date_dim",
+  "dimensionFieldSpecs": [
+    {
+      "name": "month",
+      "dataType": "INT"
+    },
+    {
+      "name": "day",
+      "dataType": "INT"
+    },
+    {
+      "name": "year",
+      "dataType": "INT"
+    },
+    {
+      "name": "quarter",
+      "dataType": "INT"
+    }
+  ],
+  "metricFieldSpecs": [],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "transaction_date",
+      "dataType": "TIMESTAMP",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:MILLISECONDS"
+    }
+  ]
+}
